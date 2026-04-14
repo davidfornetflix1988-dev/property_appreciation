@@ -1,0 +1,12 @@
+{
+  "built_at_utc": "2026-02-22T07:14:31.867753+00:00",
+  "columns": [
+    "CBSA Code",
+    "CBSA Title"
+  ],
+  "input_path": "/home/devaash88/projects/real_estate/neighborhood_app/data/geo/cbsa_reference/list1_2023.xlsx",
+  "input_sha256": "952c4b1e78acbb54e6ec9412434b7602fedacbf021736351a63c181bdb753629",
+  "output_path": "/home/devaash88/projects/real_estate/neighborhood_app/data/geo/cbsa_reference/cbsa_reference.csv",
+  "rows": 935,
+  "status": "ok"
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood App</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=18">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="page">
+            <header class="hero">
+                <div class="hero-badge">Neighborhood Analytics</div>
+                <h1>Analyze home-price appreciation </h1>
+                <p>
+                    Compare Zillow and FHFA trends, validate appreciation windows, and
+                    inspect normalized and raw market movement from a single interface.
+                </p>
+            </header>
+
+            <main class="workspace">
+                <section class="card analysis-panel">
+                    <div class="section-heading">
+                        <h2>Run appreciation analysis</h2>
+                        <p>Choose a ZIP, source, and time window to generate a market view.</p>
+                    </div>
+
+                    <form id="appreciation-form" onsubmit="event.preventDefault();">
+                        <div class="form-row">
+                            <label for="location_type">Location Type</label>
+                            <select id="location_type" name="location_type">
+                                <option value="zip">ZIP</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="location_value">ZIP Code</label>
+                            <input type="text" id="location_value" name="location_value" placeholder="Enter ZIP code">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="source">Source</label>
+                            <select id="source" name="source">
+                                <option value="zillow">Zillow</option>
+                                <option value="fhfa">FHFA</option>
+                                <option value="both" selected>Both</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="time_mode">Time Selection Mode</label>
+                            <select id="time_mode" name="time_mode">
+                                <option value="duration" selected>Duration</option>
+                                <option value="range">Start and End</option>
+                            </select>
+                        </div>
+
+                        <div class="duration-group" id="duration_group">
+                            <div class="form-row">
+                                <label for="duration_preset">Duration Preset (months)</label>
+                                <select id="duration_preset" name="duration_preset">
+                                    <option value="12" selected>12</option>
+                                    <option value="24">24</option>
+                                    <option value="36">36</option>
+                                    <option value="48">48</option>
+                                    <option value="60">60</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="duration_custom">Custom Duration (months, optional)</label>
+                                <input type="number" id="duration_custom" name="duration_custom" min="1" placeholder="Enter any positive number">
+                            </div>
+                        </div>
+
+                        <div class="time-range-group" id="time_range_group">
+                            <div class="form-row">
+                                <label for="start_month">Start Month (YYYY-MM)</label>
+                                <input type="month" id="start_month" name="start_month">
+                            </div>
+
+                            <div class="form-row">
+                                <label for="end_month">End Month (YYYY-MM)</label>
+                                <input type="month" id="end_month" name="end_month">
+                            </div>
+                        </div>
+
+                        <button type="submit">Analyze</button>
+                    </form>
+                </section>
+
+                <section class="card results-panel">
+                    <div class="section-heading">
+                        <h2>Results</h2>
+                        <p>Your summary, provider metrics, and charts will appear here after analysis.</p>
+                    </div>
+
+                    <div id="results" class="results-box">
+                        <p>Results will appear here after analysis.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/js/main.js?v=18"></script>
+</body>
+</html>
