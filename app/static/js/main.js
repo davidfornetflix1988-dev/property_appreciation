@@ -200,7 +200,8 @@ if (zillowRawCanvas && zillowResults.length > 0) {
             }))
         },
         options: {
-            responsive: false,
+            responsive: true,
+            maintainAspectRatio: false,
             animation: false
         }
     });
@@ -217,7 +218,8 @@ if (fhfaRawCanvas && fhfaResults.length > 0) {
             }))
         },
         options: {
-            responsive: false,
+            responsive: true,
+            maintainAspectRatio: false,
             animation: false
         }
     });
@@ -238,7 +240,8 @@ if (summaryBarCanvas && data.results && data.results.length > 0) {
             ]
         },
         options: {
-            responsive: false,
+            responsive: true,
+            maintainAspectRatio: false,
             animation: false
         }
     });
@@ -282,7 +285,8 @@ if (normalizedPerformanceCanvas && data.results && data.results.length > 0) {
             datasets: normalizedDatasets
         },
         options: {
-            responsive: false,
+            responsive: true,
+            maintainAspectRatio: false,
             animation: false
         }
     });
