@@ -358,3 +358,7 @@ button[type="submit"]:active {
         display: block;
     }
 }
+
+.pct-value {
+    font-weight: 800;
+}

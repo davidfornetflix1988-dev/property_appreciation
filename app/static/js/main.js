@@ -127,7 +127,7 @@ if (data.results && data.results.length > 0) {
         <p><strong>Geography:</strong> ${result.geography}</p>
         <p><strong>Start Used:</strong> ${result.start_date_used ?? "N/A"}</p>
         <p><strong>End Used:</strong> ${result.end_date_used ?? "N/A"}</p>
-        <p><strong>Percent Change:</strong> ${result.pct_change !== null ? result.pct_change : "N/A"}</p>
+        <p><strong>Percent Change:</strong> <span class="pct-value">${result.pct_change !== null ? result.pct_change : "N/A"}</span></p>
     </div>
 `).join("");
 } else {
