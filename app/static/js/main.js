@@ -1,5 +1,6 @@
 const form = document.getElementById("appreciation-form");
 const resultsBox = document.getElementById("results");
+const useResponsiveCharts = window.innerWidth <= 768;
 let durationSelectionMode = "preset";
 
 
@@ -200,7 +201,7 @@ if (zillowRawCanvas && zillowResults.length > 0) {
             }))
         },
         options: {
-            responsive: true,
+            responsive: useResponsiveCharts,
             maintainAspectRatio: false,
             animation: false
         }
@@ -218,7 +219,7 @@ if (fhfaRawCanvas && fhfaResults.length > 0) {
             }))
         },
         options: {
-            responsive: true,
+            responsive: useResponsiveCharts,
             maintainAspectRatio: false,
             animation: false
         }
@@ -240,7 +241,7 @@ if (summaryBarCanvas && data.results && data.results.length > 0) {
             ]
         },
         options: {
-            responsive: true,
+            responsive: useResponsiveCharts,
             maintainAspectRatio: false,
             animation: false
         }
@@ -285,7 +286,7 @@ if (normalizedPerformanceCanvas && data.results && data.results.length > 0) {
             datasets: normalizedDatasets
         },
         options: {
-            responsive: true,
+            responsive: useResponsiveCharts,
             maintainAspectRatio: false,
             animation: false
         }
