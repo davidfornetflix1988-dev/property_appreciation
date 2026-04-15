@@ -80,10 +80,10 @@ def create_app() -> FastAPI:
     @app.get("/", response_class=HTMLResponse)
     def home(request: Request):
         return templates.TemplateResponse(
-            "index.html",
-            {"request": request},
+            request=request,
+            name="index.html",
+            context={"request": request},
         )
-    
 
     @app.post("/appreciation", response_model=AppreciationResponse)
     
